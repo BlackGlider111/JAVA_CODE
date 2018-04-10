@@ -4,39 +4,20 @@ import java.util.Scanner;
 public class Somma {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner tastiera = new Scanner (System.in);
-		//Somma dei numeri compresi tra A e B letti da tastiera
-		 
-		int sommaA_B = 0;
-		int a=0, b=0;
 		
-		System.out.println("Parto da: ");
-		a = tastiera.nextInt();
+		//Far inserire da tastiera numeri e sommarli fintanto che la somma è inferiore a 
+		//1000
 		
-		System.out.println("E arrivo fino a: ");
-		b = tastiera.nextInt();
-		
-		//In caso i due valore si scambino, perchè "a" deve essere minore
-		//di "b".
-		
-		if(b<a)
+		int somma = 0;
+		while(somma<1000)
 		{
-			int temp=a;
-			a=b;
-			b=temp;	
+			System.out.println("Aggiungiamo un numero (" + somma + "): ");
+			somma += tastiera.nextInt();
 		}
 		
-		//Adesso il ciclo
-		
-		int contaNumeri=a;
-		while(contaNumeri<=b)
-		{
-			sommaA_B+=contaNumeri;
-			contaNumeri++;
-		}
-		
-        System.out.println(sommaA_B);
+		System.out.println("Terminato con somma che vale: " + somma);
 	}
 
 }
